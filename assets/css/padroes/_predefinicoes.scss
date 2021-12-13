@@ -1,0 +1,214 @@
+:root {
+  --padding-portal: 3em;  
+}
+
+
+/****************************************
+ * VARIAVEIS *
+ ****************************************/
+/////// CORES VARIAVEIS
+$preto: #111;
+$cor-texto: #222124;
+$azul: #374659;
+$azulescuro: #2D3743;
+$beje: #EAD4C5; 
+$bejeclaro: #FCFAF7;
+$transicao: all 400ms;
+
+
+/////// FAMILIAS UTILIZADAS
+$fonte-padrao: 'Lora',serif;
+
+///////// ACESSIBILIDADE
+$focus: 2px solid black;
+$focus2: 2px solid white;
+
+
+/////// MEDIA QUERIES e TAMANHOS
+$container: 1140px;
+$tablet: 990px;
+$desktophd: 1400px;
+$smart-maior: 680px;
+$smart-menor: 500px;
+$celular: 380px;
+$sidebar: 300px;
+
+$artigo: 680px;
+$tabela: 780px;
+
+
+/////// IMPORTACOES
+@import "../padroes/reset";
+@import "../padroes/fancybox";
+
+
+////// IMPORTACAO FONTE
+
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+
+/****************************************
+ * DEFINICOES E FORMATACOES DE TEXTO *
+ ****************************************/
+// links
+a {
+	&:link, &:visited, &:active, &:focus {
+		outline: 0;
+		color: inherit;
+		text-decoration:none;
+	}
+}
+b, strong {
+	font-weight: bold;
+	color: inherit;
+}
+u {
+	text-decoration: underline;
+}
+i, em {
+	color: inherit;
+	font-style: italic;
+}
+s, del {
+	text-decoration: line-through;
+}
+
+// paragrafos e formatacoes padrao
+p, article ul, article ol, blockquote, figure {
+	margin-bottom: 1.8em;
+	line-height: 1.8em;
+	color: $cor-texto;
+	}
+
+small {
+	font-size: 80%;
+}
+
+center {
+	text-align: center;
+}
+
+// titulos
+h1, h2, h3, h4, h5 {
+	line-height: 1.3;
+	display: block;
+  font-family: $fonte-padrao;
+
+	a {
+		color: inherit !important;
+		text-decoration:none !important;
+	}
+}
+
+h1 {
+    font-size: 1.8em; 
+
+    article {font-size: 1.6em;}
+    @media (max-width: $smart-maior) {
+
+    	font-size: 1.65em;
+
+    	article {font-size: 1.6em;}
+    }
+}
+
+h2 { 
+	font-size: 1.5em;
+	@media (max-width: $smart-maior) {font-size: 1.5em; }
+}
+h3 { 
+	font-size: 1.3em;
+	@media (max-width: $smart-maior) {font-size: 1.25em; }
+}
+h4 { 
+	font-size: 1.25em;
+	@media (max-width: $smart-maior) {font-size: 1.2em; }
+}
+h5 { 
+	font-size: 1.1em;
+	@media (max-width: $smart-maior) {font-size: 1em; }
+}
+h6 { font-size: 1em;}
+
+// quote
+blockquote {
+	font-size: 1em;
+	color: inherit;
+
+	p:last-of-type {margin-bottom: 0;}
+}
+
+// divisoria
+hr {
+	display: block;
+	width: 100%;
+	margin: 3em auto;
+    border: 0;
+    padding: 0;
+    height: 1px;
+    background: $beje;
+    position: relative;
+    overflow: inherit;
+}
+
+textarea {
+	height: 200px;
+	padding: .5em;
+	line-height: 1.65;
+}
+
+
+// reset button
+button{
+	background-color: transparent;
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	color: inherit;
+	padding: 0;
+}
+
+// botoes
+button.botao {
+	display: inline-block;
+	background: $preto;
+	font-size: 1em;
+	line-height: 1; color: white;
+	padding: .7em 2em 1em; letter-spacing: 0.09em;
+	font-family: $fonte-padrao; cursor: pointer;
+}
+
+// definicoes
+.clear {
+	clear: both;
+}
+
+.hidden {
+    display: none;
+}
+
+// alinhamentos
+.esq {text-align: left;}
+.dir {text-align: right;}
+.centralizado {text-align: center;}
+
+.floatleft {float: left; margin: 0 1em 1em 0 !important;}
+.floatright {float: right; margin: 0 0 1em 1em !important;}
+
+
+///// ACESSIBILIDADE
+
+[inert] {
+  pointer-events: none;
+  cursor: default;
+}
+
+[inert], [inert] * {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
