@@ -9,6 +9,7 @@ body, html {
 		overflow-y: hidden;
 	}
 }
+
 body {
 	font-weight: normal;
 	font-style: normal;
@@ -17,14 +18,6 @@ body {
 	font-family: $fonte-padrao;
 	letter-spacing: 0.02em;
 	position: relative;
-
-	// fundo
-	&:before, &:after {
-		content: ""; position: fixed; display: block;
-		width: 50vw; height: 100vh; top: 0;
-	}
-
-	&:before { left: 0;}
 
 	& > * {position: relative; z-index: 1;}
 	

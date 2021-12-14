@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/layout.css">
 	<link rel="icon" type="image/png" href="./assets/img/fav.png"/>
-	<script type="text/javascript" src="./assets/js/fullpage/dist/fullpage.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./assets/js/pagepiling/jquery.pagepiling.css">
 </head>
 <body>
 	<header id="menu-barra">
@@ -15,9 +15,6 @@
 			<img src="./assets/img/menu.svg" aria-hidden="true">
 			Menu
 		</button>
-		<a class="item-menu" href="homenageados.html">
-			Conheça os homenageados
-		</a>
 	</header>
 	<section id="menu-aberto" aria-expanded="false">
 		<button id="fechar-menu" tabindex="-1">
@@ -30,32 +27,58 @@
 			</a>
 			<ul role="tree">
 				<li class="fechar-menu" role="treeitem">
-					<a class="menus" href="#" tabindex="-1">Página Inicial</a>
-				</li>
-				<li class="fechar-menu" role="treeitem">
-					<a class="menus" href="homenageados.html" tabindex="-1">Homenageados/das</a>
-				</li>
-				<li class="fechar-menu" role="treeitem">
-					<a class="menus" href="fichatecnica.html" tabindex="-1">Ficha Técnica</a>
+					<a class="menus" href="#" tabindex="-1">Em breve</a>
 				</li>
 			</ul>
 		</div>
 	</section>
-	<div class="estilo1" id="fullpage">
-		<section class="logos">
-			<img src="./assets/img/logohome.gif" width="240" alt="Logo Evocar">
-			<img src="./assets/img/logoufg.svg" width="120" alt="Logo UFG">
+	<div class="main" id="pagepiling">
+		<section class="logos section">
+			<a href="https://ufg.br" target="_blank">
+				<img class="logoufg" src="./assets/img/logoufg.svg" width="120" alt="Logo UFG">
+			</a>
+			<div class="pagina1">
+				<img src="./assets/img/logo.gif" class="logoevocar" width="280" alt="Logo Evocar">
+				<h1>Onde se inscrevem vidas, não apenas nomes.</h1>
+				<button class="item-menu musica" id="musica" href="../homenageados.html">
+					<img src="./assets/img/musica.svg" aria-hidden="true">
+					Escutar a música da homenagem
+				</button>
+				<button class="item-menu musica" id="musicaparar" style="display: none;" href="../homenageados.html">
+					<img src="./assets/img/musica.svg" aria-hidden="true">
+					Parar música
+				</button>
+				<audio id="audio" src="./assets/musica.mpeg"></audio>
+				<button class="item-menu rolar" href="../homenageados.html">
+					<img src="./assets/img/seta-baixo.svg" aria-hidden="true">
+					Role a página para continuar lendo
+				</button>
+
+			</div>
+			
 		</section>
-		<section class="textos slide">
-			<h1> 
-				Onde se inscrevem vidas, não apenas nomes.
-			</h1>
-			<p>
-				Vidas refletidas em uma tela em branco, indicando quem não mais compartilhará a rotina da universidade conosco. Aquelas/es que não mais encontraremos pelas salas de aulas, corredores, auditórios, laboratórios, lanchonetes, bibliotecas.
-			</p>
+		<section class="textos section">
+			<div class="pagina2">
+				<p>Vidas refletidas em uma tela em branco, indicando quem não mais compartilhará a rotina da universidade conosco. Aquelas/es que não mais encontraremos pelas salas de aulas, corredores, auditórios, laboratórios, lanchonetes, bibliotecas.</p>	
+			</div>
 		</section>
-		<section class="destaque slide">
-			<div class="texto1">
+		<section class="textos section">
+			<div class="pagina2">
+				<p>Aqui nós lembraremos de todas e todos que tiveram suas vidas ceifadas pela pandemia da COVID-19. São docentes, técnicas/os administrativas/os e discentes de graduação e pós-graduação. Também as/os parceiros da limpeza e da segurança.</p>		
+			</div>
+		</section>
+		<section class="textos section">
+			<div class="pagina3">
+				<p>Seus nomes permanecerão gravados em todas as formas tangíveis que pudermos criar, conceber e compartilhar. Precisamos dizer, escrever, cantar, performar para que não esqueçamos quem foram e porque se foram tão abrupta e inesperadamente.</p>
+			</div>
+		</section>
+		<section class="textos section">
+			<div class="pagina3">
+				<p>Cabe a nós, que não sucumbimos à maior pandemia, que acometeu o planeta na modernidade, fazer lembrar aquelas/es que foram vitimadas/os e que deixaram um legado para a UFG nas mais diversas áreas e setores, contribuindo assim para fazer esta universidade ser o que ela é: um lugar onde vidas se encontram, se tocam, se afetam e trabalham juntas para a transformação e a justiça social.</p>		
+			</div>
+		</section>
+		<section class="section">
+			<div class="pagina4">
 				<h2>
 					É um espaço de resistência. 
 				</h2>
@@ -63,7 +86,9 @@
 					Devem aqui restar inscritas palavras, produções artísticas e acadêmicas, performances, textos literários (em verso e prosa), músicas, sons e formas de todos os tipos, suportes e origens que indiquem a indignação, mas também a resiliência com que fomos sendo instados a agir e a reagir diante da catástrofe bio-sanitária que se abateu sobre o nosso país.
 				</p>
 			</div>
-			<div class="texto2">
+		</section>
+		<section class="section">
+			<div class="pagina4">
 				<h2>
 					É um espaço de  artivismo.
 				</h2>
@@ -71,7 +96,9 @@
 					Espaço a ser ocupado por aquelas formas expressivas, que ao produzirem o encontro da arte com a performance produzem deslocamentos reflexivos que enfrentam poderes hegemônicos, autoritarismos, obscurantismos. Aqui devemos estimular solenemente a potencialidade estética e poética que sabemos ser um dos maiores valores presentes nesta comunidade universitária, mas também na sociedade onde nos inserimos.
 				</p>
 			</div>
-			<div class="texto3">
+		</section>
+		<section class="section">
+			<div class="pagina4">
 				<h2>
 					É um espaço de gratidão. 
 				</h2>
@@ -80,36 +107,67 @@
 				</p>
 			</div>
 		</section>
-		<section class="textos mudarcor" style="margin-top: unset;">
-			<p>
-				A UFG agradece a possibilidade de ter convivido com cada vida que nos tocou ao longo de suas trajetórias mais curtas ou mais longas, todas elas igualmente importantes para a construção de uma sociedade inclusiva, democrática e cidadã.
-			</p>
-			<a href="homenageados.html">
-				Conheça os homenageados
-			</a>
+		<section class="textos section">
+			<div class="pagina5">
+				<p>A UFG agradece a possibilidade de ter convivido com cada vida que nos tocou ao longo de suas trajetórias mais curtas ou mais longas, todas elas igualmente importantes para a construção de uma sociedade inclusiva, democrática e cidadã.</p>
+			</div>
+			<div class="rodape">
+				<img src="./assets/img/logoevocar.svg" alt="Logo Evocar" width="140">
+				<p>Desenvolvido e Implementado por <a href="https://ciar.ufg.br" target="_blank">CIAR UFG</a></p>
+			</div>
 		</section>
 	</div>
-	<section class="rodape">
-		<img src="./assets/img/logoevocar.svg" alt="Logo Evocar" width="140">
-		<p>Desenvolvido e Implementado por <a href="https://ciar.ufg.br" target="_blank">CIAR UFG</a></p>
-	</section>
 	<footer id="footer" aria-hidden="true">
 		<script src="assets/js/jquery.js" type="text/javascript"></script>
 		<script src="assets/js/scripts.js" type="text/javascript"></script>
+		<script src="./assets/js/pagepiling/dist/jquery.pagepiling.min.js"></script>
 		<script type="text/javascript">
-	        new fullpage('#fullpage', {
-	            anchors: ['page1', 'page2'],
-	            navigationTooltips: ['fullPage', 'Open'],
-	            css3: true,
-	            scrollingSpeed: 1000,
-	            navigation: true,
-	            slidesNavigation: true,
-	            responsiveHeight: 330,
-	            dragAndMove: true,
-	            dragAndMoveKey: 'YWx2YXJvdHJpZ28uY29tX0EyMlpISmhaMEZ1WkUxdmRtVT0wWUc=',
-	            controlArrows: false
-	        });
+	        $(document).ready(function() {
+				$('#pagepiling').pagepiling({
+				    menu: null,
+			        direction: 'vertical',
+			        verticalCentered: true,
+			        sectionsColor: [],
+			        anchors: [],
+			        scrollingSpeed: 700,
+			        easing: 'swing',
+			        loopBottom: false,
+			        loopTop: false,
+			        css3: true,
+			        navigation: {
+			            'textColor': '#374659',
+			            'bulletsColor': '#374659',
+			            'position': 'right',
+			            'tooltips': []
+			        },
+			       	normalScrollElements: null,
+			        normalScrollElementTouchThreshold: 1,
+			        touchSensitivity: 1,
+			        keyboardScrolling: true,
+			        sectionSelector: '.section',
+			        animateAnchor: false,
+
+					//events
+					onLeave: function(index, nextIndex, direction){},
+					afterLoad: function(anchorLink, index){},
+					afterRender: function(){},
+				});
+			});
 		</script>
+		<script type="text/javascript">
+		$("#musica").on("click", function() {
+			$(this).hide();
+			$("#musicaparar").show();
+			var audio = $("#audio")[0];
+			audio.play();
+		});
+		$("#musicaparar").on("click", function() {
+			$(this).hide();
+			$("#musica").show();
+			var audio = $("#audio")[0];
+			audio.pause();
+		});
+</script>
 	</footer>
 </body>
 </html>
